@@ -1,6 +1,6 @@
 <?php
 
-namespace CNBCurrencyRates;
+namespace Shopeca\CNBCurrencyRates;
 
 class Loader {
 
