@@ -25,10 +25,10 @@ class Loader {
 
 	private static function formatResponse ($rates) {
 		$r = [];
-		$lines = explode($rates, PHP_EOL);
+		$lines = explode(PHP_EOL, $rates);
 		if (count($lines) > 2) { // First two lines are description
 			for ($i = 2; $i < count($lines); $i++) {
-				$items = explode($lines[$i], '|');
+				$items = explode('|', $lines[$i]);
 				if (count($items) == 5) {
 					$r[$items[3]] = [
 						'country' => $items[0],
@@ -46,7 +46,7 @@ class Loader {
 	private static function download ($url) {
 		$rates = null;
 		$ch = curl_init($url);
-		curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		if ($data = curl_exec($ch)) {
 			$rates = $data;
 		}
