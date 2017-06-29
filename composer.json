@@ -1,0 +1,20 @@
+{
+	"name": "shopeca/cnb-currency-rates",
+	"description": "Loads currency rates from CNB (Czech National Bank)",
+	"license": [
+		"MIT"
+	],
+	"authors": [
+		{
+			"name": "Tom Hnatovsky"
+		}
+	],
+	"require": {
+		"php": ">=5.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"Shopeca\\CNBCurrencyRates\\": "src/"
+		}
+	}
+}
